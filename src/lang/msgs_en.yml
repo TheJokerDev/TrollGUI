@@ -1,0 +1,12 @@
+PluginMessages:
+  consoleNoRunCommand: "&cThe console cannot run this command."
+  tooManyArguments: "&cYou have used too many arguments for this command!"
+  interactMessage: "&cThis you have to do with a player!"
+  DisguiseOn: "&8Now you are watching your disguise"
+  DisguiseOff: "&8Now you do not see your disguise, but others do!"
+  noPermission: "&cYou do not have permission!"
+  noCommandUse: "&cError on the comand!"
+  noPlayerOnline: "&cPlayer %player% not now online"
+  playerNeeded: "&cPlease specify the player you are Forcing!"
+  forcechatMessage2: "&cWhat do you want %player% to say?"
+  reloadMessage: "The Config has been reloaded!"

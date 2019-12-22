@@ -1,0 +1,108 @@
+#Please, do not touch this!#
+version: "1.0"
+
+#Prefix and others#
+prefix: "&7[&a&lTroll&c&lGUI&7] &r"
+language: "en"
+nuke-radius: 7
+ExtremeTnT-Radius: 50
+skull-troll: true
+skull-owner: "Troll"
+skull-slotinventory: 8
+interact-victim: true
+StartMessage: true
+
+#Options#
+Possitions:
+  Troll:
+    <-: 0
+    BedrockCage: 9
+    Burn: 10
+    Creeper: 11
+    ControlPlayer: 12
+    Demo: 13
+    DropInventory: 14
+    ExtremeTroll: 15
+    ExplosiveWand: 16
+    Facepalm: 17
+    FakeBan: 18
+    FakeOP: 19
+    FillInventory: 20
+    FlyCarpet: 21
+    Freeze: 22
+    FreezeAll: 23
+    HidePlayers: 24
+    InfiniteInventory: 25
+    Lag: 26
+    Launch: 27
+    LaunchInverted: 28
+    Lava: 29
+    Levitation: 30
+    AllLevitation: 31
+    Matrix: 32
+    Morphs: 33
+    ExplodeBlock: 34
+    LavaBlock: 35
+    PublicInventory: 36
+    RandomChat: 37
+    RandomMenu: 38
+    Arrow: 39
+    SkyColors: 40
+    Smite: 41
+    TnT: 42
+    TnTNuke: 43
+    ExtremeTnT: 44
+    Spam: 45
+    EnderChest: 46
+    Inventory: 47
+    Vehicles: 48
+    Void: 49
+    Zeus: 50
+    DontLeave: 51
+  Morphs:
+    Back: 27
+    Vanish: 31
+    Mobs-item: 11
+    Players-item: 13
+    Blocks-item: 15
+    Mobs:
+      Back: 22
+      Chicken: 0
+      Cow: 1
+      Pig: 2
+      Creeper: 3
+      Bat: 4
+      Rabbit: 5
+    Blocks:
+      Back: 22
+      CraftingTable: 0
+      EnchantingTable: 1
+      Fire: 2
+      Grass: 3
+      Leaves: 4
+      Log: 5
+      Quartz: 6
+      Planks: 7
+      Stone: 8
+      TnT: 9
+      TnTTroll: 10
+    Players:
+      DisguiseInAnotherPlayer: 11
+      ClonePlayer: 13
+      AllDisguiseInAnotherPlayer: 15
+    BackToBody: 30
+    BackToBodyAll: 32
+  SkyColors:
+    Back: 0
+    Normal: 9
+    Night: 10
+    BrightStars: 11
+    Yellow: 12
+    Lag: 13
+  Vehicles:
+    Back: 0
+    Helicopter: 10
+    Plane: 11
+    Tank: 12
+    Raft: 13
+    Bike: 14

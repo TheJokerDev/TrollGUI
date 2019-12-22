@@ -1,0 +1,47 @@
+name: TrollGUI
+main: me.TheJokerDev.troll.Main
+version: 1.0
+author: TheJokerDev
+softdepend: [ProtocolLib, LibsDisguises, OpenInv]
+commands:
+  troll:
+    usage: /<command>
+    description: Open the selector menu for the Troll GUI.
+    aliases: [tr, trollgui]
+  demotroll:
+    usage: /<command>
+    description: Show the demo menu.
+    aliases: [dt, demotr, dtr, dtroll]
+  forcechat:
+    usage: /<command>
+    description: Send troll message to other player.
+    aliases: [fc]
+  morphs:
+    usage: /<command>
+    description: Open the morphs menu.
+    aliases: [ms, disfracez, dz]
+  trollreload:
+    usage: /<command>
+    description: Use the Reload Command.
+    aliases: [trrl, trollrl, trreload]
+  viewdisguise:
+    usage: /<command>
+    description: Toggle your Disguise!
+    aliases: [vd, verdisfraz, viewd, vdisfraz]
+permissions:
+  troll.open:
+    description: Open the Troll GUI and some add-ons.
+  troll.morphs:
+    description: Open the Morphs GUI.
+  troll.demotroll:
+    description: Show the Demo to other player.
+  troll.interact:
+    description: Can the player interact with something.
+  troll.skull:
+    description: Can get the Troll Skull on inventory's player.
+  troll.forcechat:
+    description: Send troll message to other player.
+  troll.reload:
+    description: Reload the Config with this permission.
+  troll.viewdisguise:
+    description: With this, you can use the /viewdisguise command.

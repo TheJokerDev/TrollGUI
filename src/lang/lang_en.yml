@@ -1,0 +1,513 @@
+#Lang = EN_en#
+Skull:
+  name: "&a/troll &7(Right Click)"
+  lore:
+  - "&7Right click to open a GUI"
+  - "&7with the list of all players"
+  - "&7connected on you'rs server!"
+
+GUI:
+  BlockedVersion: "&cWARNING: &7Pls, use above 1.9 version!"
+  Selector:
+    Title: "&aSelect a Player to Troll!"
+    Error: "&c%player% not found on the server."
+  Troll:
+    Title: "&7[&a&lTroll&c&lGUI&7]"
+  Morphs:
+    Title: "&7[&a&lMor&c&lphs&7]"
+    Mobs:
+      Title: "&aDisguises -> Mobs"
+    Blocks:
+      Title: "&aDisguises -> Blocks"
+    Players:
+      Title: "&aDisguises -> Players"
+  SkyColors:
+    Title: "&7[&a&lSky&c&lColors&7]"
+  Vehicles:
+    Title: "&7[&aVehicles Menu&7]"
+
+Troll:
+  <-:
+    name: "&e&lBack to Main"
+    lore:
+  BedrockCage:
+    name: "&aBedrock Cage"
+    lore:
+      - "&cWARNING: Destroys blocks in protected places."
+    messages:
+      successful: "&8%player% has been locked in a Bedrock cage."
+  Burn:
+    name: "&aBurn Troll"
+    lore:
+    messages:
+      successful: "&8%player% has been burned forever."
+  Creeper:
+    name: "&aCharged Creepers"
+    lore:
+      - "&cWARNING: Destroys blocks in protected places."
+    messages:
+      successful: "&8%player% it will have a very explosive scare."
+  ControlPlayer:
+    name: "&aControl Player"
+    lore:
+    messages:
+      successful: "&8You are now controlling %player%."
+  Demo:
+    name: "&aDemostration of Minecraft"
+    lore:
+    messages:
+      successful: "&8You have shown the end of minecraft demonstration to %player%."
+  DropInventory:
+    name: "&aDrop Inventory"
+    lore:
+    messages:
+      successful: "&8You have dropped the inventory of %player%."
+  ExtremeTroll:
+    name: "&a&lExtreme Troll"
+    lore:
+    messages:
+      spamlist:
+        - "&a&k12345678912345678912345678912345678912345678912345678"
+        - "&5&k12345678912345678912345678912345678912345678912345678"
+        - "&9&k12345678912345678912345678912345678912345678912345678"
+        - "&a&k12345678912345678912345678912345678912345678912345678"
+        - "&5&k12345678912345678912345678912345678912345678912345678"
+        - "&9&k12345678912345678912345678912345678912345678912345678"
+      successful: "&8%player% has been trolled extremely."
+  Facepalm:
+    name: "&aFacepalm"
+    lore:
+    messages:
+      successful: "&8%player% has been momentarily blinded."
+  FakeBan:
+    name: "&aFakeBan"
+    lore:
+    messages:
+      banMessage: "&cYou have been banned for using hacks!"
+      successful: "&8%player% has been banned from lying."
+  FakeOP:
+    name: "&aFake OP"
+    lore:
+    messages:
+      successful: "&8%player% has been given op of lying"
+      toplayer: "&7&o[Server: %player% is now administrator]"
+  FakeOres:
+    name: "&aFake Ores"
+    diamondName: "&bFakeDiamond"
+    emeraldName: "&aFakeEmerald"
+    lore:
+    messages:
+      successful: "&8Successfuly spawned a lot of diamonds and emeralds, fake hahahaha."
+  FillInventory:
+    name: "&aFill Inventory"
+    lore:
+    messages:
+      waiting: "&8Write the item in the chat, to fill the inventory of %player%."
+      no-valid-item: "&8%item% is not a valid item! Try again."
+      successful: "&8It has been filled with %item%, the inventory of %player%."
+  FlyCarpet:
+    name: "&aFly Carpet"
+    lore:
+    messages:
+      successful: "&8%player% is now flying on a flying carpet"
+  Freeze:
+    name: "&aFreeze"
+    lore:
+      - "&cNOTE: Press again to un-freeze"
+    messages:
+      activated: "&8%player% is now frozen!"
+      deactivated: "&8%player% is no longer frozen!"
+  FreezeAll:
+    name: "&aFreeze All Players"
+    lore:
+      - "&cNOTE: Press again to un-freeze"
+    messages:
+      activated: "&8All Players are now frozen!"
+      deactivated: "&8All players are no longer frozen!"
+  HidePlayers:
+    name: "&aHide/Show Players"
+    lore:
+      - "&cNOTE: Press again to show players!"
+    messages:
+      activated: "&8Players have been hidden for %player%."
+      deactivated: "&8Players have been shown for %player%."
+  InfiniteInventory:
+    name: "&aInfinite Inventory"
+    lore:
+      - "&cNOTE: Press again to deactivate!"
+    messages:
+      activated: "&8%player% has been activated the loop of inventory"
+      deactivated: "&8%player% has an normal inventory"
+  Lag:
+    name: "&aLag"
+    lore:
+      - "&cNOTE: Press again to un-lag"
+    messages:
+      activated: "&8Has been enabled the fake lag to %player%."
+      deactivated: "&8Has been disabled the fake lag for %player%."
+  Launch:
+    name: "&aLaunch Player"
+    lore:
+      - "&cWARNING: Destroys blocks in protected places."
+    messages:
+      successful: "&8Successful launch for %player%."
+  LaunchInverted:
+    name: "&aLaunch Inverted"
+    lore:
+    messages:
+      successful: "&8Successful inverted launch for %player%."
+  Lava:
+    name: "&aLava Troll"
+    lore:
+    messages:
+      successful: "&8%player% sumerged on a bath of &6Lava&8."
+  Levitation:
+    name: "&aLevitation (7 sec.)"
+    lore:
+    messages:
+      successful: "&8%player% now levitating xdxd"
+  AllLevitation:
+    name: "&aLevitation for All (7 sec.)"
+    lore:
+    messages:
+      successful: "&8All players are now levitating xdxd"
+  ExplosiveWand:
+    name: "&aExplosiveWand"
+    lore:
+    messages:
+      successful: "&a%player%&8, has received the '&aExplosiveWand'"
+  Matrix:
+    name: "&aMatrix Troll"
+    lore:
+    messages:
+      successful: "&a%player%&8, was shown the Matrix!"
+  Morphs:
+    name: "&aMorphs Menu"
+    lore:
+    messages:
+      successful: "&8Opened the morphs menu."
+  ExplodeBlock:
+    name: "&aNext Block -> Explode"
+    lore:
+    messages:
+      activated: "&8Activated explode block for %player%."
+      deactivated: "&8Deactivated explode block for %player%."
+  LavaBlock:
+    name: "&aNext Block -> Lava"
+    lore:
+    messages:
+      activated: "&8Activated lava block for %player%."
+      deactivated: "&8Deactivated lava block for %player%."
+  PublicInventory:
+    name: "&aPublicInventory"
+    lore:
+    messages:
+      successful: "&8All players show the %player% inventory"
+  RandomChat:
+    name: "&aRandomChat"
+    lore:
+      - "&cNOTE: Press again to deactivate!"
+    messages:
+      activated: "&8Random Chat activated for %player%"
+      deactivated: "&8Random Chat deactivated for %player%"
+      randomlist:
+        - "I'm dumb and that's why my girlfriend left me"
+        - "I'm Gay and they do not know it in my house"
+  RandomMenu:
+    name: "&aRandomMenu"
+    lore:
+      - "&cNOTE: Press again to deactivate!"
+    messages:
+      activated: "&8Random Menus activated for %player%"
+      deactivated: "&8Random Menus deactivated for %player%"
+  Arrow:
+    name: "&aRemote Control Arrows"
+    lore:
+      - "&cNOTE: Press again to deactivate!"
+    messages:
+      activated: "&8Arrows trolls send for %player%"
+      deactivated: "&8Arrow Troll deactivated for %player%"
+  SkyColors:
+    name: "&aSkyColors Menu"
+    lore:
+    messages:
+      successful: "&8Change the Color of %player% Sky!"
+  Smite:
+    name: "&aSmite"
+    lore:
+    messages:
+      successful: "&8Send smite in %player% location"
+  TnT:
+    name: "&aTNT & Co. Troll"
+    lore:
+      - "&cWARNING: Explode near and protected blocks!"
+    messages:
+      successful: "&8Exploding TnT's for %player%"
+  TnTNuke:
+    name: "&aTNT & Co. Nuke Troll"
+    lore:
+      - "&cWARNING: Explode much blocks!"
+    messages:
+      successful: "&8Exploding Nukes TnT's for %player%"
+  ExtremeTnT:
+    name: "&4&lE&c&lX&4&lT&c&lR&4&lE&c&lM&4&lE &cTnT"
+    lore:
+      - "&cWARNING: Explode 100x100 blocks"
+      - "&ccan cause lag on your server"
+    messages:
+      successful: "&8A 100x100 TnT spawned on the %player% location. D:"
+  Spam:
+    name: "&aSpam Troll"
+    lore:
+      - "&cWARNING: This can cause Lag!"
+    messages:
+      successful: "&8Spam sent to %player%"
+      spamlist:
+        - "&a&kASODJSAODJKASOID9A8SD9AS8DJA9SIDJSAD"
+        - "&a&kASODJSAODJKASOID9A8SD9AS8DJA9SIDJSAD"
+        - "&a&kASODJSAODJKASOID9A8SD9AS8DJA9SIDJSAD"
+        - "&a&kASODJSAODJKASOID9A8SD9AS8DJA9SIDJSAD"
+        - "&a&kASODJSAODJKASOID9A8SD9AS8DJA9SIDJSAD"
+  EnderChest:
+    name: "&aView Enderchest"
+    lore:
+    messages:
+      successful: "&8Opened the enderchest of %player%"
+  Inventory:
+    name: "&aView Inventory"
+    lore:
+    messages:
+      successful: "&8Opened inventory of %player%"
+  Void:
+    name: "&aVoid Troll"
+    lore:
+    messages:
+      successful: "&8Removing blocks above %player%"
+  Vehicles:
+    name: "&aVehicles"
+    lore:
+      - "&7Menu of Vehicles"
+    messages:
+      successful: "&8You has opened the vehicles menu."
+  Zeus:
+    name: "&aZeus Troll"
+    lore:
+    messages:
+      JoinZeus: "&eZeus joined the game."
+      LeaveZeus: "&eZeus leave the game."
+      activated: "&8Zeus Troll activated for %player%"
+      deactivated: "&8Zeus Troll deactivated for %player%"
+  DontLeave:
+    name: "&aDon't Leave"
+    lore:
+      - "&cNOTE: Press again to deactivate"
+    messages:
+      activated: "&8Now %player% has an impossible way to leave."
+      deactivated: "&8Dont Leave Troll deactivated."
+
+#Morphs Lang#
+Morphs:
+  Back:
+    name: "&e&lBack to Main"
+    lore:
+  Mobs-item:
+    name: "&aDisguises -> Mobs"
+    lore:
+  Blocks-item:
+    name: "&aDisguises -> Blocks"
+    lore:
+  Players-item:
+    name: "&aDisguises -> Players"
+    lore:
+  Vanish:
+    name: "&aVanish"
+    lore:
+      - "&cNOTE: Press again to back to normally."
+    messages:
+      activated: "&8You are now invisible!"
+      deactivated: "&8You don't no more are invisible!"
+  Mobs:
+    Back:
+      name: "&e&lBack to Morphs Main"
+      lore:
+    Chicken:
+      name: "&aDisguise in Chicken"
+      lore:
+      messages:
+        successful: "&8Now you have become a chicken!"
+    Cow:
+      name: "&aDisguise in Cow"
+      lore:
+      messages:
+        successful: "&8Now you have become a cow!"
+    Pig:
+      name: "&aDisguise in Pig"
+      lore:
+      messages:
+        successful: "&8Now you have become a pig!"
+    Creeper:
+      name: "&aDisguise in Creeper"
+      lore:
+      messages:
+        successful: "&8Now you have become a creeper!"
+    Bat:
+      name: "&aDisguise in Bat"
+      lore:
+      messages:
+        successful: "&8Now you have become a bat!"
+    Rabbit:
+      name: "&aDisguise in Rabbit"
+      lore:
+      messages:
+        successful: "&8Now you have become a rabbit!"
+  Blocks:
+    Back:
+      name: "&e&lBack to Morphs Main"
+      lore:
+    CraftingTable:
+      name: "&aCraftingTable"
+      lore:
+      messages:
+        successful: "&8Now you have become a &fCraftingTable&8!"
+    EnchantingTable:
+      name: "&aEnchantingTable"
+      lore:
+      messages:
+        successful: "&8Now you have become a &5EnchantingTable&8!"
+    Fire:
+      name: "&aFire"
+      lore:
+      messages:
+        successful: "&8Now you have become a &6Fire&8!"
+    Grass:
+      name: "&aGrass Block"
+      lore:
+      messages:
+        successful: "&8Now you have become a &aGrass&8!"
+    Leaves:
+      name: "&aLeaves"
+      lore:
+      messages:
+        successful: "&8Now you have become a &aLeaves&8!"
+    Log:
+      name: "&aLog"
+      lore:
+      messages:
+        successful: "&8Now you have become a &eLog&8!"
+    Quartz:
+      name: "&aQuartz Block"
+      lore:
+      messages:
+        successful: "&8Now you have become a &fQuartz Block&8!"
+    Planks:
+      name: "&aWood"
+      lore:
+      messages:
+        successful: "&8Now you have become a &eWood&8!"
+    Stone:
+      name: "&aStone"
+      lore:
+      messages:
+        successful: "&8Now you have become a &7Stone&8!"
+    TnT:
+      name: "&aDisguise in TnT"
+      lore:
+      messages:
+        successful: "&8Now you have become a TnT!"
+    TnTTroll:
+      name: "&aDisguise in TnT &7(Explosive)"
+      lore:
+      messages:
+        successful: "&8Now you have become a TnTTroll!"
+  Players:
+    Back:
+      name: "&e&lBack to Morphs Main"
+      lore:
+    DisguiseInAnotherPlayer:
+      name: "&aDisguise in another player"
+      lore:
+      messages:
+        successful: "&8Write the name of the player, to convert %player%"
+        converted: "&8%player% has been converted into %chat%"
+    ClonePlayer:
+      name: "&aClone Player &7(x10)"
+      lore:
+      messages:
+        successful: "&8Has successfully cloned %player%."
+    AllDisguiseInAnotherPlayer:
+      name: "&aDisguise in another player (To everyone)"
+      lore:
+      messages:
+        successful: "&8Write the name of the player, to convert everyone."
+        converted: "&8All players has been converted into %chat%"
+  BackToBody:
+    name: "&aBack to your Body"
+    lore:
+    messages:
+      successful: "&8You have returned to normal!"
+  BackToBodyAll:
+    name: "&aBack to your Body &7(For All)"
+    lore:
+    messages:
+      successful: "&8You have returned to normal!"
+
+#SkyColors Lang#
+SkyColors:
+  Back:
+    name: "&e&lBack to Main"
+    lore:
+  Normal:
+    name: "&aNormal Sky"
+    lore:
+    messages:
+      successful: "&8Sky restored for %player%"
+  Night:
+    name: "&aNight Sky"
+    lore:
+    messages:
+      successful: "&8Now the sky of %player% is &1Night"
+  BrightStars:
+    name: "&aBright Stars"
+    lore:
+    messages:
+      successful: "&8Now the sky of %player% is &bBrightStars"
+  Yellow:
+    name: "&aYellow Sky"
+    lore:
+    messages:
+      successful: "&8Now the sky of %player% is &eYellow"
+  Lag:
+    name: "&aLag Sky"
+    lore:
+    messages:
+      successful: "&8Now the sky of %player% is lagging"
+
+Vehicles:
+  Back:
+    name: "&e&lBack to Main"
+    lore:
+  Helicopter:
+    name: "&aHelicopter"
+    lore:
+    messages:
+      successful: "&8Helicopter spawned on %player% location"
+  Plane:
+    name: "&aPlane"
+    lore:
+    messages:
+      successful: "&8Plane spawned on %player% location"
+  Tank:
+    name: "&aTank"
+    lore:
+    messages:
+      successful: "&8Tank spawned on %player% location"
+  Raft:
+    name: "&aRaft"
+    lore:
+    messages:
+      successful: "&8Raft spawned on %player% location"
+  Bike:
+    name: "&aBike"
+    lore:
+    messages:
+      successful: "&8Bike spawned on %player% location"

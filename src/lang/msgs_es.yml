@@ -1,0 +1,12 @@
+PluginMessages:
+  consoleNoRunCommand: "&cLa consola no puede usar este comando."
+  tooManyArguments: "&cHas usado demasiados argumentos para este comando!"
+  interactMessage: "&cTienes que hacer esto con un jugador!"
+  DisguiseOn: "&8Ahora estas viendo tu disfraz!"
+  DisguiseOff: "&8Ahora tu ya no ves tu disfraz, pero los demas si!"
+  noPermission: "&cPor favor usa /help para una lista de comandos!"
+  noCommandUse: "&cError en el comando!"
+  noPlayerOnline: "&cEl jugador %player% no esta online"
+  playerNeeded: "&cPor favor pon al jugador que estas forzando!"
+  forcechatMessage2: "&cQue quieres que %player% diga?"
+  reloadMessage: "Configuracion recargada!"
