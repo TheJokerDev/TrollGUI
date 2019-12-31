@@ -179,6 +179,17 @@ Troll:
     material: BARRIER
     amount: 1
     data: 0
+  Next:
+    material: SKULL_ITEM
+    amount: 1
+    data: 3
+    skull-owner: "MHF_ArrowRight"
+Troll2:
+  Back:
+    material: SKULL_ITEM
+    amount: 1
+    data: 3
+    skull-owner: "MHF_ArrowLeft"
 
 #Morphs Items#
 Morphs:

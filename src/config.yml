@@ -3,6 +3,7 @@ version: "1.0"
 
 #Prefix and others#
 prefix: "&7[&a&lTroll&c&lGUI&7] &r"
+new-version-reminder: true
 language: "en"
 nuke-radius: 7
 ExtremeTnT-Radius: 50
@@ -59,6 +60,9 @@ Possitions:
     Void: 49
     Zeus: 50
     DontLeave: 51
+    Next: 53
+  Troll2:
+    Back: 18
   Morphs:
     Back: 27
     Vanish: 31

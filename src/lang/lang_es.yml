@@ -12,7 +12,7 @@ GUI:
     Title: "&aSelecciona un jugador!"
     Error: "&c%player% no se encontro en el servidor."
   Troll:
-    Title: "&7[&a&lTroll&c&lGUI&7]"
+    Title: "&7[&a&lTroll&c&lGUI&7] - Pagina %page%"
   Morphs:
     Title: "&7[&a&lDis&c&lfraces&7]"
     Mobs:
@@ -280,6 +280,10 @@ Troll:
       successful: "&8Abriste el inventario de %player%"
   Vehicles:
     name: "&aVehiculos"
+    TnTItem:
+      name: "&aTirar TnT"
+    Explode:
+      name: "&aExplotar vehículo"
     lore:
       - "&7Menu de Vehiculos"
     messages:
@@ -304,6 +308,15 @@ Troll:
     messages:
       activated: "&8Ahora %player% tiene una manera imposible de salir."
       deactivated: "&8Troll de no poder salir, ha sido desactivado."
+  Next:
+    name: "&e&lSiguiente ->"
+    lore:
+      - "&7Click para el siguiente menu!"
+Troll2:
+  Back:
+    name: "&e&lRegresar"
+    lore:
+      - "&7Click para regresar!"
 
 #Lenguaje de Disfracez#
 Morphs:

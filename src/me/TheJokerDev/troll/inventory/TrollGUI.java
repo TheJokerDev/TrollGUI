@@ -5,6 +5,7 @@ import me.TheJokerDev.troll.messages.Files;
 import me.TheJokerDev.troll.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -25,7 +26,7 @@ public class TrollGUI
         Main.target.get(t);
         if (t != null)
         {
-            Inventory troll = Bukkit.getServer().createInventory(null, 54, c(lg.getString("GUI.Troll.Title")));
+            Inventory troll = Bukkit.getServer().createInventory(null, 54, c(lg.getString("GUI.Troll.Title").replaceAll("%page%", "1")));
 
             troll.setItem(i("<-"), is("<-"));
             troll.setItem(i("BedrockCage"), item("BedrockCage"));
@@ -73,15 +74,28 @@ public class TrollGUI
             troll.setItem(i("Void"), item("Void"));
             troll.setItem(i("Zeus"), item("Zeus"));
             troll.setItem(i("DontLeave"), item("DontLeave"));
+            troll.setItem(i("Next"), is("Next"));
+
+            p.openInventory(troll);
+        }
+    }
+
+    public void openTroll2(Player p){
+        Player t = Main.target.get(p);
+        Main.target.get(t);
+        if (t != null) {
+            Inventory troll = Bukkit.getServer().createInventory(null, 27, c(lg.getString("GUI.Troll.Title").replaceAll("%page%", "2")));
+
+            troll.setItem(i2("Back"), is2("Back"));
 
             p.openInventory(troll);
         }
     }
 
     private Integer i(String m)
-    {
-        return Main.getConfiguration().getInt("Possitions.Troll." + m);
-    }
+{
+    return Main.getConfiguration().getInt("Possitions.Troll." + m);
+}
 
     public ItemStack item(String m)
     {
@@ -93,6 +107,23 @@ public class TrollGUI
     {
 
         return new ItemBuilder(Material.valueOf(String.valueOf(this.lg.getItem("Troll." + m + ".material"))), this.lg.getItems().getInt("Troll." + m + ".amount")).setDurability((short) this.lg.getItems().getInt("Troll." + m + ".data")).setName(this.lg.getString("Troll." + m + ".name")).setLore(this.lg.getStringList("Troll." + m + ".lore")).setSkullOwner(this.lg.getItems().getString("Troll." + m + ".skull-owner")).toItemStack();
+    }
+
+    private Integer i2(String m)
+    {
+        return Main.getConfiguration().getInt("Possitions.Troll2." + m);
+    }
+
+    public ItemStack item2(String m)
+    {
+
+        return new ItemBuilder(Material.valueOf(String.valueOf(this.lg.getItem("Troll2." + m + ".material"))), this.lg.getItems().getInt("Troll2." + m + ".amount")).setDurability((short) this.lg.getItems().getInt("Troll2." + m + ".data")).setName(this.lg.getString("Troll2." + m + ".name")).setLore(this.lg.getStringList("Troll2." + m + ".lore")).toItemStack();
+    }
+
+    private ItemStack is2(String m)
+    {
+
+        return new ItemBuilder(Material.valueOf(String.valueOf(this.lg.getItem("Troll2." + m + ".material"))), this.lg.getItems().getInt("Troll2." + m + ".amount")).setDurability((short) this.lg.getItems().getInt("Troll2." + m + ".data")).setName(this.lg.getString("Troll2." + m + ".name")).setLore(this.lg.getStringList("Troll2." + m + ".lore")).setSkullOwner(this.lg.getItems().getString("Troll2." + m + ".skull-owner")).toItemStack();
     }
 
     private String c(String msg)

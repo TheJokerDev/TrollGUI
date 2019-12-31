@@ -5,6 +5,9 @@ import me.TheJokerDev.troll.Main;
 import me.TheJokerDev.troll.inventory.*;
 import me.TheJokerDev.troll.messages.Files;
 import me.TheJokerDev.troll.utils.IBlock;
+import me.egg82.tcpp.events.player.playerMove.LagEventCommand;
+import me.egg82.tcpp.lib.ninja.egg82.bukkit.utils.TaskUtil;
+import me.egg82.tcpp.lib.ninja.egg82.utils.MathUtil;
 import me.libraryaddict.disguise.DisguiseAPI;
 import me.libraryaddict.disguise.disguisetypes.*;
 import net.md_5.bungee.api.ChatColor;
@@ -16,6 +19,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
@@ -53,7 +57,7 @@ public class TrollListeners
             Location tl22;
             ItemStack emerald2;
             Set<Player> names;
-            if (!event.getInventory().getName().equals(this.m("GUI.Troll.Title", t))) {
+            if (!event.getInventory().getName().equals(this.m("GUI.Troll.Title", t).replaceAll("%page%", "1"))) {
                 return;
             }
             final Player p = (Player)event.getWhoClicked();
@@ -906,6 +910,15 @@ public class TrollListeners
                     p.sendMessage(Main.prefix + this.m("Troll.DontLeave.messages.activated", t));
                 }
             }
+            if (event.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(this.lf.getString("Troll.Next.name")) && Main.target.keySet().iterator().hasNext()){
+                p.closeInventory();
+                if (Main.getConfiguration().getString("language").equalsIgnoreCase("en")){
+                    p.sendTitle(Main.prefix,"&8Coming soon... :D".replaceAll("&", "§"));
+                } else {
+                    p.sendTitle(Main.prefix,"&8Muy pronto... :D".replaceAll("&", "§"));
+                }
+                //tm.openTroll2(p);
+            }
         }
     }
 
@@ -968,27 +981,18 @@ public class TrollListeners
         if (player.getItemInHand().getType() == Material.STICK) {
             HashSet<Material> transparent = new HashSet<>();
             transparent.add(Material.AIR);
+            transparent.add(Material.WATER);
             Block block = player.getTargetBlock(transparent, 120);
-            if (player.getInventory().getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase(this.lf.getString("Troll.ExplosiveWand.name"))) {
+            if ((player.getItemInHand().getType() == Material.STICK) && (player.getItemInHand().getItemMeta().getLore() != null) && (player.getItemInHand().getDurability() == 0) && (player.getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase(lf.getString("Troll.ExplosiveWand.name")))) {
                 player.getWorld().strikeLightning(block.getLocation());
-                player.getWorld().createExplosion(block.getLocation(), 1.5f);
+                player.getWorld().createExplosion(block.getLocation(), 3f);
             }
         }
-        if (player.getItemInHand().getType() == Material.SKULL_ITEM) {
-            if (player.getItemInHand().getDurability() == 3) {
-                if (player.getItemInHand().getItemMeta().getLore() == null) {
-                    if (!player.isInsideVehicle()) {
-                        player.getInventory().removeItem(player.getItemInHand());
-                        return;
-                    }
-                    if (player.getInventory().getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase("§cLanzar Dinamita")) {
-                        player.getWorld().spawnEntity(player.getLocation(), EntityType.PRIMED_TNT);
-                        return;
-                    }
-                    return;
-                }
-            }
+        if ((player.getItemInHand().getType() == Material.SKULL_ITEM) && (player.getItemInHand().getItemMeta().getLore() != null) && (player.getItemInHand().getDurability() == 3) && (player.getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase(lf.getString("Troll.Vehicles.TnTItem.name")))) {
+            player.getWorld().spawnEntity(player.getLocation().add(0, -1, 0), EntityType.PRIMED_TNT);
+            return;
         }
+        return;
     }
 
     public String m(String msg, Player t) {

@@ -12,7 +12,7 @@ GUI:
     Title: "&aSelect a Player to Troll!"
     Error: "&c%player% not found on the server."
   Troll:
-    Title: "&7[&a&lTroll&c&lGUI&7]"
+    Title: "&7[&a&lTroll&c&lGUI&7] - Page %page%"
   Morphs:
     Title: "&7[&a&lMor&c&lphs&7]"
     Mobs:
@@ -285,6 +285,10 @@ Troll:
       successful: "&8Removing blocks above %player%"
   Vehicles:
     name: "&aVehicles"
+    TnTItem:
+      name: "&aDrop TnT"
+    Explode:
+      name: "&aExplode Vehicle"
     lore:
       - "&7Menu of Vehicles"
     messages:
@@ -304,6 +308,15 @@ Troll:
     messages:
       activated: "&8Now %player% has an impossible way to leave."
       deactivated: "&8Dont Leave Troll deactivated."
+  Next:
+    name: "&e&lNext Page ->"
+    lore:
+      - "&7Click to next page!"
+Troll2:
+  Back:
+    name: "&e&lBack"
+    lore:
+      - "&7Click to back!"
 
 #Morphs Lang#
 Morphs:

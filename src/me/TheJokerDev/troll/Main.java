@@ -6,16 +6,14 @@ import me.TheJokerDev.troll.effects.EffectTNT;
 import me.TheJokerDev.troll.inventory.MorphsGUI;
 import me.TheJokerDev.troll.inventory.SelectorGUI;
 import me.TheJokerDev.troll.inventory.TrollGUI;
-import me.TheJokerDev.troll.listeners.PlayerListeners;
-import me.TheJokerDev.troll.listeners.SkyColorsListeners;
-import me.TheJokerDev.troll.listeners.TrollListeners;
-import me.TheJokerDev.troll.listeners.VehiclesListeners;
+import me.TheJokerDev.troll.listeners.*;
 import me.TheJokerDev.troll.messages.Files;
 import me.TheJokerDev.troll.messages.FilesManager;
 import me.TheJokerDev.troll.utils.ItemBuilder;
 import me.libraryaddict.disguise.DisguiseAPI;
 import me.libraryaddict.disguise.disguisetypes.PlayerDisguise;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -25,12 +23,17 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -67,18 +70,20 @@ public class Main
     public ArrayList infiniteInventory = new ArrayList();
     public ArrayList expBlock = new ArrayList();
     public ArrayList dontleave = new ArrayList();
+    public String latestversion;
+    PluginDescriptionFile pdffile = getDescription();
+    public String version = this.pdffile.getVersion();
     public ArrayList<String> toTrans = new ArrayList<>();
     public ArrayList<String> toTrans1 = new ArrayList<>();
     public ArrayList frozen;
     public ArrayList allfrozen;
-    public static ArrayList items;
+    private Files lf = new Files();
 
     public void onEnable()
     {
+        updateChecker();
         hookDependiencies();
         saveDefaultConfig();
-        System.out.println("TrollGUI");
-        System.out.println("Developed by TheJokerDev");
         if (getConfig().getBoolean("StartMessage"))
         {
             System.out.println("---------------------------------------------------");
@@ -87,7 +92,6 @@ public class Main
             System.out.println("     SpigotMC profile, give me a 5 star pls xD!");
             System.out.println("---------------------------------------------------");
         }
-        getLogger().info("Plugin Version: " + getDescription().getVersion());
         FilesManager lm = new FilesManager(this);
         lm.setup(this);
         getLogger().info("All files are been loaded");
@@ -97,6 +101,7 @@ public class Main
         getCommand("demotroll").setExecutor(new DemoTroll(this));
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new TrollListeners(this), this);
+        pm.registerEvents(new TrollListeners2(this), this);
         pm.registerEvents(new PlayerListeners(this), this);
         pm.registerEvents(new SkyColorsListeners(), this);
         pm.registerEvents(new VehiclesListeners(this), this);
@@ -110,12 +115,32 @@ public class Main
         this.maxControlTime = 0;
         this.cooldown = 0;
         this.cd = new ArrayList<>();
+
         getLogger().info("All Add-ons are been loaded!");
     }
 
     public static FileConfiguration getConfiguration()
     {
         return getInstance().getConfig();
+    }
+    public void updateChecker() {
+        try {
+            HttpURLConnection con = (HttpURLConnection)(new URL(
+                    "https://api.spigotmc.org/legacy/update.php?resource=70125")).openConnection();
+            int timed_out = 1250;
+            con.setConnectTimeout(timed_out);
+            con.setReadTimeout(timed_out);
+            this.latestversion = (new BufferedReader(new InputStreamReader(con.getInputStream()))).readLine();
+            if (this.latestversion.length() <= 7 &&
+                    !this.version.equals(this.latestversion)) {
+                Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "There is a new version available. " + ChatColor.YELLOW +
+                        "(" + ChatColor.GRAY + this.latestversion + ChatColor.YELLOW + ")");
+                Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "You can download it at: " + ChatColor.WHITE + "https://www.spigotmc.org/resources/70125/");
+            }
+
+        } catch (Exception ex) {
+            Bukkit.getConsoleSender().sendMessage(prefix + ChatColor.RED + "Error while checking update.");
+        }
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
